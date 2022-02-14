@@ -28,13 +28,20 @@
                 <!-- form area -->
                 <div class="row py-5">
                     <div class="col">
-                        <form class="row row-cols-md-auto g-3 align-items-center d-flex justify-content-center">
+                        <form 
+                        action="javascript:void(0)"
+                        onsubmit="handleOnSubmit(this)"
+                        class="row row-cols-md-auto g-3 align-items-center d-flex justify-content-center">
                             <div class="col-12">
                                 <label class="visually-hidden" for="inlineFormInputGroupUsername">Your Task</label>
                                 <div class="input-group">
 
-                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername"
-                                        placeholder="your-task">
+                                    <input 
+                                    type="text" class="form-control"
+                                    name="task"
+                                    id="inlineFormInputGroupUsername"
+                                    placeholder="your-task"
+                                    required>
                                 </div>
                             </div>
 
@@ -42,8 +49,14 @@
                                 <label class="visually-hidden" for="inlineFormInputGroupUsername">Hours</label>
                                 <div class="input-group">
 
-                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername"
-                                        placeholder="hours">
+                                    <input 
+                                    type="number" 
+                                    name="hr"
+                                    class="form-control" 
+                                    id="inlineFormInputGroupUsername"
+                                    placeholder="hours"
+                                    required>
+                                        
                                 </div>
                             </div>
 
@@ -67,64 +80,7 @@
                         <div class="list-items">
                             <table class="table table-striped">
 
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                            Watching TV
-                                        </td>
-
-                                        <td>5hrs</td>
-                                        <td class="text-end">
-                                            <button class="btn-danger">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </button>
-                                            <butten class="btn btn-sm btn-warning">
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </butten>
-                                        </td>
-
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                            Watching TV
-                                        </td>
-
-                                        <td>5hrs</td>
-                                        <td class="text-end">
-                                            <button class="btn-danger">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </button>
-                                            <butten class="btn btn-sm btn-warning">
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </butten>
-                                        </td>
-
-                                        
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                            Watching TV
-                                        </td>
-
-                                        <td>5hrs</td>
-                                        <td class="text-end">
-                                            <button class="btn-danger">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </button>
-                                            <butten class="btn btn-sm btn-warning">
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </butten>
-                                        </td>
-
-                                        
-                                    </tr>
-                                    
-                                </tbody>
+                                <tbody id="task-list"></tbody>
                             </table>
 
                         </div>
@@ -136,63 +92,8 @@
                         <div class="list-items ">
                             <table class="table table-striped">
 
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                            Watching TV
-                                        </td>
-
-                                        <td>5hrs</td>
-                                        <td class="text-end">
-                                            <button class="btn-danger">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </button>
-                                            <butten class="btn btn-sm btn-warning">
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </butten>
-                                        </td>
-
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                            Watching TV
-                                        </td>
-
-                                        <td>5hrs</td>
-                                        <td class="text-end">
-                                            <button class="btn-danger">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </button>
-                                            <butten class="btn btn-sm btn-warning">
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </butten>
-                                        </td>
-
-                                        
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                            Watching TV
-                                        </td>
-
-                                        <td>5hrs</td>
-                                        <td class="text-end">
-                                            <button class="btn-danger">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </button>
-                                            <butten class="btn btn-sm btn-warning">
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </butten>
-                                        </td>
-
-                                        
-                                    </tr>
-                                    
+                                <tbody id="task-list">
+                                  
                                 </tbody>
                             </table>
 
@@ -205,9 +106,9 @@
             </div>
 
 
-            <div class="row mt-2 pb-5 fs-3 fw-bolder text-warning">
+            <div class="row mt-2 pb-5 fs-3 fw-bolder text-success">
                 <div class="col text-center">
-                    Total time allocated this week = 50hrs
+                    Total time allocated this week =  <span id="totalHours">0</span> hr
                 </div>
             </div>
         </div>
