@@ -1,4 +1,12 @@
-.wraper{
-    min-height: 100vh;
-    background: linear-gradient(to bottom, rgba(143, 159, 163, 0.534), rgba(177, 118, 201, 0.529));
+.wraper {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(143, 159, 163, 0.534),
+    rgba(177, 118, 201, 0.529)
+  );
+}
+img {
+  height: 120px;
+  width: 220px;
 }
